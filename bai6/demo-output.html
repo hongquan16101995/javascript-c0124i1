@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="m1()">Click1</button>
+<button onclick="m2()">Click2</button>
+<button onclick="m3()">Click3</button>
+<button onclick="m4()">Click4</button>
+<p id="ketqua1">Đây là thẻ p có id ketqua1</p>
+<p id="ketqua2">Đây là thẻ p có id ketqua2</p>
+</body>
+<script>
+    function m1() {
+        console.log("HelloWorld1")
+    }
+    
+    function m2() {
+        // alert("HelloWorld2")
+        let a = confirm("Testssss?")
+        // if (a || !a) {m2()}
+    }
+    
+    function m3() {
+        document.write("<i>HelloWorld3</i>")
+    }
+
+    function m4() {
+        document.getElementById("ketqua1").innerText = "<i>HelloWorld4</i>"
+        document.getElementById("ketqua2").innerHTML = "<i>HelloWorld4</i>"
+    }
+</script>
+</html>

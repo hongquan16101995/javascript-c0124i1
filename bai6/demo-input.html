@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="m1()">Click1</button>
+<button onclick="m2()">Click2</button>
+</body>
+<script>
+    function m1() {
+        let a = prompt("Nhập gì đó:")
+        console.log(a)
+    }
+    
+    function m2() {
+        let a = document.getElementById("input").value
+        console.log(a)
+    }
+</script>
+</html>

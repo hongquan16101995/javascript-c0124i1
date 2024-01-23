@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      form {
+        border: 1px solid white;
+        width: 520px;
+        height: 265px;
+        background-color: aqua;
+      }
+      h1 {
+        background-color: orangered;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+      }
+      
+      .blue {
+        color: #0000ff;
+      }
+      
+      .right {
+        text-align: right;
+      }
+      
+      label {
+        color: orangered;
+      }
+      
+      table {
+        width: 500px;
+        height: 250px;
+        margin: 5px 10px 10px 10px;
+        border: 1px solid white;
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+      <tr>
+        <td colspan="4"><h1>SỞ THÍCH CỦA BẠN</h1></td>
+      </tr>
+      <tr>
+        <td class="right"><label for="name" class="blue">Họ và tên</label></td>
+        <td colspan="3"><input type="text" id="name" size="35"></td>
+      </tr>
+      <tr>
+        <td class="right"><label for="email"  class="blue">Email</label></td>
+        <td colspan="3"><input type="text" id="email"></td>
+      </tr>
+      <tr>
+        <td class="right"><span class="blue">Sở thích</span></td>
+        <td><label><input type="checkbox"> Thể thao</label></td>
+        <td><label><input type="checkbox"> Âm nhạc</label></td>
+        <td><label><input type="checkbox"> Đọc sách</label></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input type="checkbox"> Lướt web</label></td>
+        <td><label><input type="checkbox"> Chơi game</label></td>
+        <td><label><input type="checkbox"> Điện ảnh</label></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input type="checkbox"> Du lịch</label></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="3">
+            <button type="submit">Gửi thông tin</button>
+            <button type="reset">Nhập lại</button>
+        </td>
+      </tr>
+    </table>
+</form>
+</body>
+</html>
