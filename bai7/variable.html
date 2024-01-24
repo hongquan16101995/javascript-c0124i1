@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // biến cục bộ: khai báo bằng let
+    // dùng let sẽ giúp giảm tải cho bộ nhớ
+    // giảm việc nhầm lẫn do vị trí khai báo và vị trí sử dụng quá xa nhau
+    // khi khai báo let sẽ không được khai báo lại biến đó
+    let a = 10
+    {
+        let b = 100
+        console.log(b)
+        a = 1000
+    }
+    console.log(a)
+
+    // biến toàn cục: khai báo bằng var
+    // tạo 1 biến dùng trong toàn chương trình
+    // cho phép khai báo lại biến đó
+    // chiếm dụng bộ nớ nhiều hơn so với let
+    {
+      var num = 222
+    }
+    console.log(num)
+    var num = 111
+    console.log(num)
+    
+    // const: khai báo hằng số, không đổi giá trị sau khai báo
+    const demo = 10
+    // demo = 100
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // toán học
+    // trong toán học, có 1 cặp toán tử đặc biệt: toán tử tăng giảm
+    // ++ và --
+    // cách triển khai của toán tử sẽ phụ thuộc vào vị trí xuất hiện của nó
+    // nếu toán tử đứng trước biến (prefix) => giá trị của biến sẽ tăng hoặc giảm trước khi tính toán
+    // nếu toán tử đứng sau biến (suffix) => gia trị của biến sẽ tăng hoặc giảm sau khi tính toán
+    let a = 10
+    let b = 5
+    console.log(a + b)
+    console.log(a - b)
+    console.log(a / b) // phép chia
+    console.log(a * b) // phép nhân
+    console.log(a % b) // a / b
+    console.log("---------------------")
+    console.log("Giá trị của a: " + a)
+    console.log(--a % b) // dư 1
+    console.log("Giá trị của a: " + a)
+    let c = 10
+    let d = 5
+    console.log("Giá trị của c: " + c)
+    console.log(c-- % d) // dư 0
+    console.log("Giá trị của c: " + c)
+    
+    // gán
+    console.log("----------- GÁN ------------")
+    let num1 = 10
+    let num2 = 2
+    num1 += num2 // num1 = num1 + num2
+    console.log(num1)
+    num1 /= num2
+    console.log(num1)
+    
+    // logic
+    // ! - NOT : trả về kết quả ngược lại của giá trị
+    // && - AND : trả về kết quả là true, khi và chỉ khi cả 2 về đều là true
+    // trả về false trong mọi trường hợp còn lại
+    // || - OR : trả về kết quả là false, khi và chỉ khi cả 2 về đều là false
+    // trả về true trong mọi trường hợp còn lại
+    console.log("----------- LOGIC ------------")
+    let boo1 = false
+    let boo2 = false
+    console.log(!boo1)
+    console.log(boo1 && boo2)
+    console.log(boo1 || boo2)
+    
+    // so sánh
+    console.log("----------- SO SÁNH ------------")
+    let num10 = 11
+    let num11 = 10
+    console.log(num10 > num11)
+    console.log(num10 < num11)
+    console.log(num10 >= num11)
+    console.log(num10 <= num11)
+    // khác nhau của == và ===; != và !==
+    console.log("----------- === ------------")
+    let str = "5"
+    let num = 5
+    console.log(str == num) // true
+    console.log(str === num) // false
+    console.log(str != num) // false
+    console.log(str !== num) // true
+    
+    // cộng chuỗi
+    // khi mà phép cộng có 1 trong 2 toán hạng là chuỗi
+    // mọi giá trị khi gặp + chuỗi đều tuân thủ như nhau
+    console.log("----------- + CHUỖI ------------")
+    let x = 1
+    let y = 2
+    let z = "abc"
+    console.log(x + y +z)
+    console.log(x + z + y)
+    console.log(z + x + y)
+    let demo = true
+    console.log(z + demo)
+    
+    // type of: kiểm tra kiểu dữ liệu của biến
+    console.log("----------- TYPE OF ------------")
+    let v1 = 1
+    let v2 = "1"
+    let v3 = true
+    let v4 = null
+    let v5 = {name: "abc"}
+    let v6
+    console.log(typeof(v1))
+    console.log(typeof(v2))
+    console.log(typeof(v3))
+    console.log(typeof(v4))
+    console.log(typeof(v5))
+    console.log(typeof(v6))
+</script>
+</html>
