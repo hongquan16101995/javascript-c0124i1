@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="../bai4/food2.jpg" height="150" width="200" id="img"
+         style="left: 50px; top: 50px; position: relative"/>
+</body>
+<script>
+    function moveRight() {
+        let img = document.getElementById("img")
+        img.style.left = parseInt(img.style.left) + 5 + "px"
+    }
+    
+    function moveLeft() {
+      let img = document.getElementById("img")
+      img.style.left = parseInt(img.style.left) - 5 + "px"
+    }
+    
+    function moveDown() {
+      let img = document.getElementById("img")
+      img.style.top = parseInt(img.style.top) + 5 + "px"
+    }
+    
+    function moveUp() {
+      let img = document.getElementById("img")
+      img.style.top = parseInt(img.style.top) - 5 + "px"
+    }
+    
+    function moveSelected(e) {
+        switch (e.keyCode) {
+          case 37:
+          case 65:
+            moveLeft()
+                break
+          case 38:
+          case 87:
+            moveUp()
+            break
+          case 39:
+          case 68:
+            moveRight()
+            break
+          case 40:
+          case 83:
+            moveDown()
+            break
+        }
+    }
+    
+    window.addEventListener("keydown", moveSelected)
+</script>
+</html>

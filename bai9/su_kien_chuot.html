@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="../bai4/food2.jpg" height="150" width="200" id="img"
+    style="left: 10px; top: 10px; position: relative"/>
+    <br><br><br>
+    <button onclick="moveRight()">Click me</button>
+    <button onclick="moveLeft()">Click me 1</button>
+</body>
+<script>
+    function moveRight() {
+        let img = document.getElementById("img")
+        console.log(img.style.left)
+        img.style.left = parseInt(img.style.left) + 5 + "px"
+        console.log(img.style.left)
+    }
+
+    function moveLeft() {
+        let img = document.getElementById("img")
+        console.log(img.style.left)
+        img.style.left = parseInt(img.style.left) - 5 + "px"
+        console.log(img.style.left)
+    }
+</script>
+</html>

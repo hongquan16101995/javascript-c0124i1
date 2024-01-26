@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td colspan="4"><input type="text" id="result"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="1" id="1" onclick="getValue1()"></td>
+    <td><input type="button" value="2" id="2" onclick="getValue2()"></td>
+    <td><input type="button" value="3" id="3" onclick="getValue3()"></td>
+    <td><input type="button" value="+" id="+" onclick="getValueAdd()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="4" id="4" onclick="getValue4()"></td>
+    <td><input type="button" value="5" id="5" onclick="getValue5()"></td>
+    <td><input type="button" value="6" id="6" onclick="getValue6()"></td>
+    <td><input type="button" value="-" id="-" onclick="getValueSub()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="7"></td>
+    <td><input type="button" value="8"></td>
+    <td><input type="button" value="9"></td>
+    <td><input type="button" value="*" id="*" onclick="getValueMulti()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="C" onclick="clearCal()"></td>
+    <td><input type="button" value="0"></td>
+    <td><input type="button" value="=" id="=" onclick="getValueResult()"></td>
+    <td><input type="button" value="/" id="/" onclick="getValueDiv()"></td>
+  </tr>
+</table>
+</body>
+<script>
+  let number1 = ""
+  let number2 = ""
+  let operator = ""
+  
+  function clearCal() {
+    number1 = ""
+    number2 = ""
+    operator = ""
+    document.getElementById("result").value = ""
+  }
+  function getValue1() {
+    let value = document.getElementById("1").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  
+  function getValue2() {
+    let value = document.getElementById("2").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  function getValue3() {
+    let value = document.getElementById("3").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  
+  function getValue4() {
+    let value = document.getElementById("4").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  
+  function getValue5() {
+    let value = document.getElementById("5").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  function getValue6() {
+    let value = document.getElementById("6").value
+    if (operator === "") {
+      number1 += value
+      document.getElementById("result").value = number1
+    } else {
+      number2 += value
+      document.getElementById("result").value = number2
+    }
+  }
+  function getValueAdd() {
+    if (number2 !== "") {
+      calculator()
+    }
+    operator = document.getElementById("+").value
+    document.getElementById("result").value = operator
+  }
+  
+  function getValueSub() {
+    if (number2 !== "") {
+      calculator()
+    }
+    operator = document.getElementById("-").value
+    document.getElementById("result").value = operator
+  }
+  
+  function getValueMulti() {
+    if (number2 !== "") {
+      calculator()
+    }
+    operator = document.getElementById("*").value
+    document.getElementById("result").value = operator
+  }
+  
+  function getValueDiv() {
+    if (number2 !== "") {
+      calculator()
+    }
+    operator = document.getElementById("/").value
+    document.getElementById("result").value = operator
+  }
+  
+  function getValueResult() {
+    if (operator === "+") {
+      document.getElementById("result").value = +number1 + +number2
+    } else if (operator === "-") {
+      document.getElementById("result").value = +number1 - +number2
+    } else if (operator === "*") {
+      document.getElementById("result").value = +number1 * +number2
+    } else if (operator === "/") {
+      document.getElementById("result").value = +number1 / +number2
+    }
+  }
+  
+  function calculator() {
+    let result
+    if (operator === "+") {
+      result = +number1 + +number2
+    } else if (operator === "-") {
+      result = +number1 - +number2
+    } else if (operator === "*") {
+      result = +number1 * +number2
+    } else if (operator === "/") {
+      result = +number1 / +number2
+    }
+    number1 = result + ""
+    number2 = ""
+  }
+</script>
+</html>
