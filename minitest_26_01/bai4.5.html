@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="size1">Cạnh số 1: </label><br>
+<input type="text" id="size1"><br>
+<label for="size2">Cạnh số 2: </label><br>
+<input type="text" id="size2"><br>
+<label for="size3">Cạnh số 3: </label><br>
+<input type="text" id="size3"><br><br>
+<button onclick="bai4e()">Bài 4e</button>
+<p id="result_e"></p>
+</body>
+<script>
+    function bai4e() {
+        let size1 = +document.getElementById("size1").value
+        let size2 = +document.getElementById("size2").value
+        let size3 = +document.getElementById("size3").value
+        let result
+        
+        let b1 = (size1 + size2) > size3
+        let b2 = (size1 + size3) > size2
+        let b3 = (size2 + size3) > size1
+        
+        let boo1 = (Math.pow(size1, 2) + Math.pow(size2, 2)) === Math.pow(size3, 2)
+        let boo2 = (Math.pow(size1, 2) + Math.pow(size3, 2)) === Math.pow(size2, 2)
+        let boo3 = (Math.pow(size2, 2) + Math.pow(size3, 2)) === Math.pow(size1, 2)
+        
+        if (size1 > 0 && size2 > 0 && size3 > 0) {
+            if (b1 && b2 && b3) {
+                if (size1 === size2 && size2 === size3) {
+                    result = "Đây là 1 hình tam giác đều"
+                } else if (size1 === size2 || size2 === size3 || size1 === size3) {
+                    result = "Đây là 1 hình tam giác cân"
+                } else if (boo1 || boo2 || boo3) {
+                    result = "Đây là tam giác vuông"
+                } else {
+                    result = "Đây là 1 hình tam giác"
+                }
+            } else {
+                result = "Không phải 1 hình tam giác"
+            }
+        } else {
+            result = "Không phải 1 hình tam giác"
+        }
+        document.getElementById("result_e").innerHTML = result
+    }
+</script>
+</html>

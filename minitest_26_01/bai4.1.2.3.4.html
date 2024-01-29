@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<label for="size">Cạnh hình vuông: </label><br>
+<input type="text" id="size">
+<button onclick="bai4a()">Bài 4a</button>
+<p id="result_a"></p>
+
+<label for="numA">Số A: </label><br>
+<input type="text" id="numA"><br>
+<label for="numB">Số B: </label><br>
+<input type="text" id="numB">
+<button onclick="bai4b()">Bài 4b</button>
+<p id="result_b"></p>
+
+<label for="numMax">Số lớn: </label><br>
+<input type="text" id="numMax"><br>
+<label for="numMin">Số nhỏ: </label><br>
+<input type="text" id="numMin">
+<button onclick="bai4c()">Bài 4c</button>
+<p id="result_c"></p>
+
+<label for="year">Năm: </label><br>
+<input type="text" id="year">
+<button onclick="bai4d()">Bài 4d</button>
+<p id="result_d"></p>
+</body>
+<script>
+    function bai4a() {
+        let size = document.getElementById("size").value
+        let peri = size * 4
+        let area = size * size
+        document.getElementById("result_a").innerHTML
+            = "Chu vi = " + peri + "; diện tích = " + area
+    }
+
+    function bai4b() {
+        let numA = document.getElementById("numA").value
+        let numB = document.getElementById("numB").value
+        let binhPhuong = Math.pow(numA, 2)
+        let muNumB = Math.pow(numA, numB)
+        document.getElementById("result_b").innerHTML
+            = "Bình phương số A = " + binhPhuong + "; số A mũ B = " + muNumB
+    }
+
+    function bai4c() {
+        let numMax = +document.getElementById("numMax").value
+        let numMin = +document.getElementById("numMin").value
+        let count
+        if (numMax > numMin) {
+            count = numMax - numMin + 1
+        } else {
+            count = numMin - numMax + 1
+        }
+        let sum = ((numMax + numMin) * count) / 2
+        document.getElementById("result_c").innerHTML
+            = "Tổng dãy số = " + sum
+    }
+
+    function bai4d() {
+        let year = document.getElementById("year").value
+        let theKy
+        if (year % 100 === 0) {
+            theKy = year / 100
+        } else {
+            theKy = parseInt(year / 100) + 1
+        }
+        document.getElementById("result_d").innerHTML
+            = "Năm " + year + " thuộc thế kỷ " + theKy
+    }
+
+</script>
+</html>
