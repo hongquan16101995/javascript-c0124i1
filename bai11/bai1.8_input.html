@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="random">Random: </label><input type="text" id="random">
+<label for="guest">Guest: </label><input type="text" id="guest">
+<button onclick="playGame2()">Start2</button>
+<button onclick="guest()">Guest</button>
+<p id="noti"></p>
+</body>
+<script>
+  let numRandom
+  let count = 1
+  function playGame2() {
+    let number = document.getElementById("random").value
+    numRandom = Math.floor(Math.random() * number)
+    console.log(numRandom)
+  }
+  
+  function guest() {
+    let numGuest = +document.getElementById("guest").value
+    if (numGuest < numRandom && count !== 3) {
+      document.getElementById("noti").innerHTML = "Bạn đoán số nhỏ hơn, hãy tăng lên!"
+    } else if (numGuest > numRandom && count !== 3) {
+      document.getElementById("noti").innerHTML = "Bạn đoán số lớn hơn, hãy giảm xuống!"
+    } else if (numGuest === numRandom) {
+      document.getElementById("noti").innerHTML = "Bạn đã đoán đúng, xin chúc mừng!"
+    }
+    count++
+    if (count === 4) {
+      document.getElementById("noti").innerHTML = "Bạn đã thua!"
+    }
+  }
+</script>
+</html>

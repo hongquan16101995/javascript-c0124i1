@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="playGame()">Start</button>
+    <button onclick="playGame1()">Start1</button>
+</body>
+<script>
+    function playGame() {
+        let number = +prompt("Nhập 1 số bất kỳ")
+        let numRandom = Math.floor(Math.random() * number)
+        let numGuest
+        let count = 1
+        do {
+            numGuest = +prompt("Nhập vào số bạn đoán: (lần " + count+ ")")
+            if (numGuest < numRandom && count !== 3) {
+                alert("Bạn đoán số nhỏ hơn, hãy tăng lên!")
+            } else if (numGuest > numRandom && count !== 3) {
+                alert("Bạn đoán số lớn hơn, hãy giảm xuống!")
+            } else if (numGuest === numRandom) {
+                alert("Bạn đã đoán đúng, xin chúc mừng!")
+                break
+            }
+            count++
+        } while (count < 4)
+        if (count === 4) {
+            alert("Bạn đã thua!")
+        }
+    }
+
+    function playGame1() {
+        let number1 = +prompt("Nhập số bất kỳ thứ 1: ")
+        let number2 = +prompt("Nhập số bất kỳ thứ 2: ")
+        let numRandom
+        if (number2 > number1) {
+            // hàm Math.random(): trả về kết quả là 1 số thập phân bất kỳ
+            // có giá trị từ 0 => 1
+            // đem giá trị trên * 1 số => 0 => số đó
+            numRandom = Math.floor(Math.random() * (number2 - number1)) + number1
+        } else {
+            numRandom = Math.floor(Math.random() * (number1 - number2)) + number2
+        }
+        console.log(numRandom)
+        let numGuest
+        let count = 1
+        do {
+            numGuest = +prompt("Nhập vào số bạn đoán: (lần " + count+ ")")
+            if (numGuest < numRandom && count !== 3) {
+                alert("Bạn đoán số nhỏ hơn, hãy tăng lên!")
+            } else if (numGuest > numRandom && count !== 3) {
+                alert("Bạn đoán số lớn hơn, hãy giảm xuống!")
+            } else if (numGuest === numRandom) {
+                alert("Bạn đã đoán đúng, xin chúc mừng!")
+                break
+            }
+            count++
+        } while (count < 4)
+        if (count === 4) {
+            alert("Bạn đã thua!")
+        }
+    }
+</script>
+</html>

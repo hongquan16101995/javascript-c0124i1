@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 50 số: 1200
+    // 100 số: 1460
+    // 200 số: 2230
+    // 300 số: 2670
+    // 400 số: 3345
+    // trên 400 số: 3870
+    
+    let so_dien = +prompt("Nhập số điện cần tính: ")
+    let money
+    if (so_dien < 50) {
+        money = so_dien * 1200
+    } else if (so_dien < 100) {
+        money = 50 * 1200 + (so_dien - 50) * 1460
+    } else if (so_dien < 200) {
+        money = 50 * 1200 + 50 * 1460 + (so_dien - 100) * 2230
+    } else if (so_dien < 300) {
+        money = 50 * 1200 + 50 * 1460 + 100 * 2230 + (so_dien - 200) * 2670
+    } else if (so_dien < 400) {
+        money = 50 * 1200 + 50 * 1460 + 100 * 2230 + 100 * 2670 + (so_dien - 300) * 3345
+    } else {
+        money = 50 * 1200 + 50 * 1460 + 100 * 2230 + 100 * 2670 + 100 * 3345 + (so_dien - 400) * 3870
+    }
+    alert("Số tiền điện cần trả là: " + money)
+</script>
+</html>
