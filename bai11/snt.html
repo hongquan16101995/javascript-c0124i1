@@ -7,6 +7,7 @@
 <body>
     <button onclick="check1()">Click1</button>
     <button onclick="check2()">Click2</button>
+    <button onclick="check3()">Click3</button>
 </body>
 <script>
     // in ra 20 số nguyên tố đầu tiên
@@ -56,5 +57,78 @@
             alert(N + " không là SNT")
         }
     }
+
+    function check3() {
+        let N = +prompt("Nhập 1 số bất kỳ")
+        // phương pháp đặt biến đúng sai được gọi là phương pháp đặt cờ
+        // cờ thay đổi trạng thái tùy vào điều kiện bài toán
+        // dùng while
+        let check = true
+        let i = 2
+        while (i < N) {
+            if (N % i === 0) {
+                check = false
+                break
+            }
+            i++
+        }
+        if (check) {
+            alert(N + " là SNT")
+        } else {
+            alert(N + " không là SNT")
+        }
+    }
+    
+    // in ra (log) 20 SNT đầu tiên
+    // c1: viết tất cả trong 1 hàm
+    function display20Prime() {
+        let count = 1
+        let N = 1
+        while (count <= 20) {
+            if (N >= 2) {
+                let check = true
+                for (let i = 2; i < N; i++) {
+                    if (N % i === 0) {
+                        check = false
+                        break
+                    }
+                }
+                if (check) {
+                    console.log(N)
+                    count++
+                }
+            }
+            N++
+        }
+    }
+    
+    display20Prime()
+    
+    // c2: tách hàm kiểm tra và hiển thị thành 2 hàm riêng biệt
+    function isPrime(N) {
+        if (N < 2) {
+            return false
+        } else {
+            for (let i = 2; i < N; i++) {
+                if (N % i === 0) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    function display20Prime1() {
+        let count = 1
+        let N = 1
+        while (count <= 20) {
+            if (isPrime(N)) {
+                console.log(N)
+                count++
+            }
+            N++
+        }
+    }
+
+    display20Prime1()
 </script>
 </html>

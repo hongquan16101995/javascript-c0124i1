@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tg3 {
+            text-align: right;
+            width: 50px
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    // 4 hình tam giác
+    // 1. tam giác vuông dưới trái
+    // 2. tam giác vuông trên trái
+    // 3. tam giác vuông dưới phải
+    // 4. tam giác vuông trên phải
+    
+    // 1. dưới trái
+    let data1 = ""
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            data1 += "*"
+        }
+        data1 += "<br>"
+    }
+    document.write(data1)
+
+    // 2. trên trái
+    let data2 = ""
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+            data2 += "*"
+        }
+        data2 += "<br>"
+    }
+    document.write(data2)
+
+    // 3. dưới phải
+    let data3 = ""
+    for (let i = 1; i <= 5; i++) {
+        for (let k = 5; k > i; k--) {
+            data3 += "&ensp;"
+        }
+        for (let j = 1; j <= i; j++) {
+            data3 += "*"
+        }
+        data3 += "<br>"
+    }
+    document.write(data3)
+
+    // 4. trên phải
+    let data4 = ""
+    for (let i = 1; i <= 5; i++) {
+        for (let k = 1; k < i; k++) {
+            data4 += "&ensp;"
+        }
+        for (let j = 5; j >= i; j--) {
+            data4 += "*"
+        }
+        data4 += "<br>"
+    }
+    document.write(data4)
+
+    // 3.1 dưới phải
+    let data5 = "<div id='tg3'>"
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            data5 += "*"
+        }
+        data5 += "<br>"
+    }
+    data5 += "</div>"
+    document.write(data5)
+</script>
+</html>

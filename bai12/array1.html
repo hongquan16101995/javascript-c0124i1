@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [4,5,6,7]
+    // mảng trên có 4 phần tử => length: 4
+    // mỗi phần tử sẽ có index tương ứng như sau:
+    // phần tử giá trị 4 có index là: 0
+    // phần tử giá trị 5 có index là: 1
+    // phần tử giá trị 6 có index là: 2
+    // phần tử giá trị 7 có index là: 3
+    
+    // index của phần tử sẽ dùng để truy xuất giá trị phần tử đó
+    // cú pháp: <tên mảng>[<vị trí phần tử muốn lấy giá trị>]
+    console.log(arr[2])
+    
+    // gán giá trị cho phần tử thì cũng thông qua index
+    // cú pháp: <tên mảng>[<vị trí phần tử muốn lấy giá trị>] = <giá trị mới>
+    console.log(arr)
+    arr[2] = 100
+    console.log(arr)
+    
+    // tìm giá trị lớn nhất trong dãy số có N số
+    let array = [5,71,32,7,96,4,3,6,9]
+    
+    // duyệt mảng: hành động đi qua từng vị trí trong mảng, thông qua đó có thể lấy được
+    // vị trí phần tử, giá trị phần tử
+    // sau đó sử dụng 2 thành phần trên theo mục đích bài toán
+    // duyệt mảng sẽ sử dụng đến độ dài mảng và vòng lặp
+    // truy xuất độ dài mảng theo cú pháp: <tên mảng>.length
+    // cách truy xuất trên của độ dài còn được gọi là truy xuất thuộc tính độ dài của đối tượng mảng
+    // khởi tạo bước lặp i = 0 tương đương việc xét vị trí index đầu tiên: vị trí số 0
+    for (let i = 0; i < array.length; i++) {
+        console.log("Vị trí phần tử: " + i)
+        console.log("Giá trị phần tử: " + array[i])
+    }
+</script>
+</html>

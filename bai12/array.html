@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // mảng là 1 biến đặc biệt, cho phép chứa nhiều giá trị
+    // các giá trị thì sẽ có vị trí liền kề nhau trong bộ nhớ
+    // ý nghĩa: cho phép gom nhóm nhiều giá trị có chung ý nghĩa để xử lý
+    // phần tử: là các giá trị được gán vào biến mảng
+    // độ dài: tổng số lượng các phần tử có trong mảng
+    // tên gọi độ dài mảng: length
+    // index: chỉ số vị trí phần tử trong mảng, bắt đầu từ 0, kết thúc ở (độ dài mảng - 1)
+    // mảng là biến có kiểu dữ liệu dạng Object (đối tượng)
+    // cần phân biệt: kdl của mảng và kdl của phần tử trong mảng
+    
+    // 2 cách
+    // c1: khai báo trực tiếp thông qua ngoặc vuông
+    let a = [1,2,3,4]
+    
+    // c2: khai báo bằng từ khóa new
+    // từ khóa new: là dùng để khai báo đối tượng trong lập trình
+    // 7 kdl: string, number, boolean, undefined, null, Symbol, Object
+    let b = new Array(1,2,3,4)
+    // cách viết như trên thực chất là sai quy tắc
+    // tuy nhiên thì Js là 1 ngôn ngữ khá LỎNG LẺO về quy tắc
+    // => chấp nhận cách viết trên là 1 dạng khai báo mảng
+    // cú pháp chính xác của khai báo new:
+    let arr = new Array(5) // 5 là độ dài của mảng được khai báo
+    // LƯU Ý:
+    // 1. MẢNG TRONG JS CHO PHÉP THAY ĐÔI ĐỘ DÀI TỰ DO
+    // 2. MẢNG TRONG JS CÓ THỂ CHỨA MỌI KIỂU DỮ LIỆU ĐƯỢC PHÉP DÙNG TRONG JS
+</script>
+</html>
