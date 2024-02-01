@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // thêm phần tử cuối mảng: push
+  console.log("--------push-------")
+  let arr1 = [1,2,3]
+  console.log(arr1)
+  arr1.push(111)
+  console.log(arr1)
+  console.log("-------pop--------")
+  // xoá phần tử cuối mảng: pop
+  let arr2 = [1,2,3]
+  console.log(arr2)
+  console.log(arr2.pop())
+  console.log(arr2)
+  console.log("--------unshift-------")
+  // thêm đầu mảng: unshift
+  let arr3 = [1,2,3]
+  console.log(arr3)
+  arr3.unshift(111)
+  console.log(arr3)
+  console.log("--------shift-------")
+  // xóa đầu mảng: shift
+  let arr4 = [1,2,3]
+  console.log(arr4)
+  console.log(arr4.shift())
+  console.log(arr4)
+  console.log("--------concat-------")
+  // nối mảng: concat - không phải là nối vào mảng có sẵn, mà sẽ nối 2 mảng thành 1 mảng mới
+  let arr5 = [1,2,3]
+  let arr6 = [8,9,10]
+  let arrNew = arr5.concat(arr6)
+  console.log(arrNew)
+  console.log(arr5)
+  console.log(arr6)
+  console.log("--------join-------")
+  // nối phần tử trong mảng theo điều kiện: join
+  let arr7 = [1,2,3,4]
+  console.log(arr7.join())
+  console.log(arr7.join("+"))
+  console.log(arr7.join("-"))
+  console.log(arr7)
+  console.log("--------indexOf/lastIndexOf-------")
+  // lấy vị trí đầu tiên phần tử: indexOf
+  // lấy vị trí cuối cùng phần tử: lastIndexOf
+  let arr8 = [1,4,5,7,3,4,6,4,9]
+  console.log(arr8)
+  console.log(arr8.indexOf(4))
+  console.log(arr8.lastIndexOf(4))
+  console.log(arr8.indexOf(10))
+  console.log("--------splice-------")
+  // xoá hoặc thêm phần tử tại một vị trí: splice - thay đổi mảng gốc
+  // tham số 1: vị trí bắt đầu cắt
+  // tham số 2: số lượng phần tử sẽ cắt
+  // tham số 3 (option): phần tử thêm vào nếu cần
+  let arrSplice = [4,5,6,7,8,9]
+  console.log(arrSplice)
+  console.log(arrSplice.splice(2,2))
+  console.log(arrSplice)
+  console.log("--------splice + add element-------")
+  let arrSpliceAdd = [4,5,6,7,8,9]
+  console.log(arrSpliceAdd)
+  console.log(arrSpliceAdd.splice(2,2,100,111))
+  console.log(arrSpliceAdd)
+  console.log("--------slice-------")
+  // mươn phần tử của mảng: slice - không thay đổi mảng gốc
+  // tham số 1: vị trí bắt đầu mượn
+  // tham số 2: vị trí kết thúc mượn + 1
+  let arrSlice = [4,5,6,7,8,9]
+  console.log(arrSlice)
+  console.log(arrSlice.slice(2,4))
+  console.log(arrSlice)
+  console.log("--------reverse-------")
+  // đảo ngược mảng: reverse - làm thay đổi mảng gốc
+  let arr10 = [1,3,5,7,2,6]
+  console.log(arr10)
+  arr10.reverse()
+  console.log(arr10)
+  console.log("--------sort-------")
+  // sắp xếp mảng: sort
+  let arr = [1,4,3,6,1,2,22]
+  arr.sort((a,b) => {return a - b})
+  console.log(arr)
+</script>
+</html>

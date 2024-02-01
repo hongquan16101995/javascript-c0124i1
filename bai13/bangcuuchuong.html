@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table {
+      width: 800px
+    }
+
+    table, tr, td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+
+</body>
+<script>
+  let data = "<table>"
+  for (let i = 1; i < 10; i++) {
+    data = data + "<tr>"
+    for (let j = 2; j < 10; j++) {
+      data += "<td>"
+      data += j + " x " + i + " = " + (i * j)
+      data += "</td>"
+    }
+    data += "</tr>"
+  }
+  data += "</table>"
+  document.write(data + "<br>")
+
+  // sử dụng string literal: hỗ trợ việc khai báo biến trong khi đang sử dụng chuỗi
+  // sử dụng cú pháp: ${<tên biến>}
+  let data1 = "<table>"
+  for (let i = 1; i < 10; i++) {
+    data1 += "<tr>"
+    for (let j = 2; j < 10; j++) {
+      data1 += "<td>"
+      data1 += `${j} x ${i} = ${i * j}`
+      data1 += "</td>"
+    }
+    data1 += "</tr>"
+  }
+  data1 += "</table>"
+  document.write(data1)
+</script>
+</html>
