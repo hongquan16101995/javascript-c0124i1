@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // mảng 2 chiều: là biến đặc biến, cho phép chứa nhiều giá trị
+    // bản chất: dạng mảng 1 chiều, mỗi phần tử trong mảng đó, là 1 mảng 1 chiều khác
+    // thường làm việc với mảng 2 chiều có số phần tử chẵn
+    // khai báo mảng 2 chiều:
+    let arr = [[1,2,3],
+        [4,5,6],
+        [7,8,9]]
+    // khai báo bằng từ khoóa new
+    let array = new Array(3)
+    for (let i = 0; i < array.length; i++) {
+        array[i] = new Array(4)
+        // array[i] = [1,2,3]
+    }
+    
+    // truy xuất phần tử
+    // mảng 1 chiều: phần tử có 1 chỉ số index
+    // mảng 2 chiều: phần tử có 2 chỉ số index, đại diện cho hàng và ô đang chứa giá trị
+    console.log(arr[1][2])
+    
+    // duyệt mảng: sử dụng for lồng
+    let a = [[9,8,7,10],[6,5,4,11],[3,2,1,12]]
+    for (let i = 0; i < a.length; i++) {
+        console.log("Hàng thứ " + i + ":" + a[i])
+        for (let j = 0; j < a[i].length; j++) {
+            console.log(a[i][j])
+            console.log("Index = " + i + "," + j)
+        }
+    }
+    
+    let b = [[1,2,3],[4],[7,9]]
+    let b1 = new Array(3)
+    for (let i = 0; i < b1.length; i++) {
+        if (i === 0) {
+            b1[i] = new Array(3)
+        } else if (i === 1) {
+            b1[i] = new Array(1)
+        }
+    }
+    console.log("--------------------")
+    for (let i = 0; i < b.length; i++) {
+        console.log("Hàng thứ " + i + ":" + b[i])
+        for (let j = 0; j < b[i].length; j++) {
+            console.log(b[i][j])
+            console.log("Index = " + i + "," + j)
+        }
+    }
+</script>
+</html>
