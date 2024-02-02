@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // cấu trúc cơ bản của hàm:
+    // function <tên hàm> () {<statements...}
+    // hàm có thể chứa 2 thành phần:
+    // 1. tham số
+    // 2. giá trị trả về: đại diện là từ khóa return
+    // Lưu ý: trong hàm có thể có nhiều return, nhưng chỉ có 1 return duy nhất sẽ thực thi tùy vào điệu kiện bài toán
+    // return sẽ làm kết thúc hàm tại thời điểm và vị trí đó
+    // 4 dạng hàm cơ bản có thể có:
+    // a. hàm không tham số, không giá trị trả về
+    // hàm mà không có phần trong ngoặc tròn và phần thân không có từ khóa return
+    // * Ý NGHĨA: chia để trị, giúp chia nhỏ bài toán và giải quyết từng phần
+    // tái sử dụng: giúp tránh trùng lặp code, gọi lại thông qua tên hàm
+    function display() {
+        console.log("HelloWorld")
+    }
+    
+    // b. hàm có tham số, không có giá trị trả về
+    function display1(name) {
+        console.log(name)
+    }
+    
+    // c. hàm không tham số, có giá trị trả về
+    function getSum() {
+        let a = 10
+        let b = 5
+        return a + b
+    }
+    
+    // d. hàm có tham số, có giá trị trả về
+    function getSum1(a, b) {
+        return a + b
+    }
+    
+    display()
+    display()
+    display1("C0124I1")
+    display1("Demo")
+    let sum = getSum()
+    console.log(sum)
+    
+    let sum1 = getSum1(100, 200)
+    console.log(sum1)
+
+    let sum2 = getSum1(11, 33)
+    console.log(sum2)
+    
+    // tham số: biến đầu vào của hàm, đặt tên và đại diện cho các giá trị truyền vào hàm sau này
+    // phần thân hàm có thể sử dụng biến để tính toán hoặc thao tác như biến bình thường
+    // cần phân biệt: tham số khi khởi tạo và tham số khi gọi hàm
+    // => khi gọi hàm, tham số được truyền 1 giá trị cụ thể => nó được là đối số
+    
+    // giá trị trả về: là kết quả sau khi thực hiện hàm, có thể mang đi sử dụng ở một nơi khác trong chương trình
+    
+    // hàm: function
+    // tên hàm: name_function
+    // tham số: parameters
+    // tham số khi có giá trị cụ thể - đối số: arguments
+    // giá trị trả về: return_value
+    // thân hàm: body, block
+</script>
+</html>

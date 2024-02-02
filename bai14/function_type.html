@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // hàm thông thường
+    // function <tên> (tham số nếu có) {thân hàm...}
+    
+    // 1 số loại hàm đặc trưng:
+    // 1. hàm đệ quy
+    // 2. hàm mũi tên - arrow function
+    // 3. hàm ẩn danh - anonymous function
+    
+    // trong đó, hàm ẩn danh và mũi tên sẽ thường được sử dụng làm tham số cho hàm khác
+    // hàm ẩn danh và mũi tên sẽ không đi độc lập
+    // cấu trúc:
+    // ẩn danh: function (tham số nếu có) {thân hàm...}
+    // mũi tên: (tham số nếu có) => {thân hàm...}
+    // ví dụ: khi dùng hàm sort của mảng
+    let arr = [1,5,7,3,8,33]
+    // arr.sort((a,b) => {return a - b})
+    // arr.sort(function(a, b) {
+    //     return a - b
+    // })
+    console.log(arr)
+    
+    // đệ quy: là dạng thuật toán, mà khi đó thì trong thân hàm sẽ chứa lời gọi hàm của chính nó
+    // cần lưu ý đến điều kiện thực thi của hàm
+    // đệ quy sẽ gây tốn dung lượng lớn của bộ nhớ
+    // khi sử dụng cần cân nhắc và đảm bảo hiểu, nắm bắt được hàm đệ quy
+    // ví dụ: tính giai thừa của 1 số
+    let number = 5
+    let giaiThua = 1
+    for (let i = 1; i <= 5; i++) {
+        giaiThua *= i
+    }
+    console.log(giaiThua)
+    
+    function tinhGiaiThua(number) {
+        if (number === 1) {
+            return 1
+        }
+        return number * tinhGiaiThua(number - 1)
+    }
+
+    console.log(tinhGiaiThua(5))
+</script>
+</html>
