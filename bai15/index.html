@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 5
+    let b = 10
+    let arr = [5,10]
+    
+    function swap1(a, b) {
+        let temp = a
+        a = b
+        b = temp
+    }
+    
+    function swap2(arr) {
+        let temp = arr[0]
+        arr[0] = arr[1]
+        arr[1] = temp
+    }
+    
+    swap1(a, b)
+    swap2(arr)
+    console.log(a)
+    console.log(b)
+    console.log(arr[0])
+    console.log(arr[1])
+    // 5 10 5 10
+    // 10 5 10 5
+    // 10 5 5 10
+    // 5 10 10 5 => Huân
+    // tham trị, tham chiếu
+</script>
+</html>

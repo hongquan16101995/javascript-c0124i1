@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="addElement()">Add Element</button>
+<button onclick="sum1()">Get Sum</button>
+</body>
+<script>
+    // let arr = createArray()
+    // console.log("Tổng giá trị các SNT trong mảng là: " + sum(arr))
+    // console.log(arr)
+    
+    // sử dụng HTML
+    let array = []
+    
+    function addElement() {
+        let element = +document.getElementById("input").value
+        array.push(element)
+    }
+
+    function sum1() {
+        let sum = 0
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                sum += array[i]
+            }
+        }
+        console.log("Tổng: " + sum)
+        console.log(array)
+    }
+    // sử dụng HTML
+
+    function createArray() {
+        let length = +prompt("Nhập vào độ dài mảng bạn muốn tạo: ")
+        let arr = new Array(length)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt("Nhập vào phần tử thứ " + (i + 1) + ": ")
+        }
+        return arr
+    }
+    
+    function isPrime(N) {
+        if (N < 2) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(N); i++) {
+                if (N % i === 0) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    function sum(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                sum += arr[i]
+            }
+        }
+        return sum
+    }
+</script>
+</html>
