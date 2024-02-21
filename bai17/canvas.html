@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--canvas: thẻ trong html, cho phép mn vẽ hình thể treên đó-->
+<canvas width="700" height="500" style="border: 1px solid" id="canvas"></canvas>
+</body>
+<script>
+  // lấy thẻ canvas về js
+  let canvas = document.getElementById("canvas")
+  // định dạng vẽ 2d trên canvas
+  let ctx = canvas.getContext("2d") // ctx: là đối tượng cung cấp các phương thức để vẽ
+  // góc trên cùng bên trái của canvas sẽ được có là tọa độ gốc (0,0)
+  // 1 số phương thức trong ctx
+  // di chuyển vị trí bắt đầu vẽ đường thẳng: moveTo(tọa độ X, tọa độ Y)
+  // xác định điểm cuối của đường thẳng: lineTo(tọa độ X, tọa độ Y)
+  // vẽ hình chữ nhật: fillRect(tọa độ X, tọa độ Y, chiều dài, chiều rộng)
+  // vẽ hình tròn: arc(tọa độ X, tọa độ Y, bán kính, 0, Math.PI*2)
+  // thuộc tính tô màu: fillStyle = (màu mong muốn)
+  // kẻ đường thẳng: stroke()
+  // đổ đầy: fill()
+  // bắt đầu vẽ: beginPath()
+  // kết thúc vẽ: closePath()
+  
+  // vẽ đường thẳng
+  ctx.moveTo(50, 50)
+  ctx.lineTo(250, 50)
+  ctx.stroke()
+  ctx.closePath()
+  
+  // vẽ hình chữ nhật
+  ctx.fillRect(50, 60, 80, 50)
+  ctx.fillStyle = "red"
+  ctx.fillRect(50, 150, 80, 50)
+
+  // vẽ hình tròn
+  ctx.arc(300, 200, 60, 0, Math.PI*2)
+  ctx.fill()
+  
+  // thiết lập việc gọi lại 1 hàm trong js vs thời gian quy định: callBack (gọi lại)
+  // setTimeOut()
+  // setInterval()
+  
+  // tìm hiểu về việc thiết kế game đơn giản trong Js với canvas
+</script>
+</html>
